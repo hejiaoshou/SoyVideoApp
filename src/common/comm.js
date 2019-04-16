@@ -1,12 +1,13 @@
-//SOY 视频APP公共信息
-const appInfo = {
-  version : '0.1.1',
-  client: 'android',
-};
+
 
 export default {
   install(Vue){
-    //SOY 视频APP版本号:
-    Vue.prototype.appInfo = appInfo;
+    //设置app状态栏字体颜色 plusLoad判断plus组件是否装载
+    Vue.prototype.setStatusBar = function (start){
+      let color = start==='into'?'dark':'light';
+      plusLoad(()=>{
+        plus.navigator.setStatusBarStyle(color);
+      })
+    }
   }
 }

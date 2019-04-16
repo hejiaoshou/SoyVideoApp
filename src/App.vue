@@ -9,25 +9,36 @@
 <script>
 export default {
   beforeCreate(){
-    this.appInfo.version = '1.0.1'
+    
   },
   data(){
     return{
-
     }
   },
-  mounted(){}
+  methods:{
+    
+  },
+  created (){
+    
+  },
+  mounted(){
+   
+  }
 }
 </script>
 
 <style lang="less">
-@import '~mint-ui/lib/style.min.css'; 
-html,
-body,
-#app{
-  height: 100%;
+@import '~mint-ui/lib/style.min.css';
+html{
+  font-size: 7.5px;
+  letter-spacing:0.08rem;
 }
 body{
   margin:0px;
+  background-color: #efefef;
+}
+html,body,#app{
+  height: 100%;
+  overflow: hidden;
 }
 </style>
